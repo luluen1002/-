@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>作品集網站 | 嚕嚕鹿</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <span class="nav-logo">嚕嚕鹿</span>
+      <nav class="nav-links">
+        <a href="index.html">回首頁</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="section-inner">
+      <h2 class="section-title">2023福井</h2>
+      <p class="section-text">
+        一個很棒的鄉下地方。
+      </p>
+      <p class="section-text">
+        這裡想放一張照片但不知道怎。
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 嚕嚕鹿.</p>
+  </footer>
+
+</body>
+</html>
