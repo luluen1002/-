@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>作品集網站 | 陳小明</title>
+  <title>作品集網站 | 嚕嚕鹿</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="nav">
     <div class="nav-inner">
-      <span class="nav-logo">小明</span>
+      <span class="nav-logo">嚕嚕鹿</span>
       <nav class="nav-links">
         <a href="index.html">回首頁</a>
       </nav>
@@ -31,7 +31,7 @@
   </section>
 
   <footer class="footer">
-    <p>&copy; 2026 陳小明.</p>
+    <p>&copy; 2026 嚕嚕鹿.</p>
   </footer>
 
 </body>
