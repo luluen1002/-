@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- 
+  這是一個「個人作品集」網站的範例。
+  每個區塊都有註解說明「這是什麼」跟「為什麼這樣寫」,
+  你可以直接改文字內容,先不用管 CSS 怎麼運作。
+-->
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <!-- viewport 這行讓網站在手機上也能正常縮放,幾乎每個網站都要加 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>陳小明 | 前端作品集</title>
+
+  <!-- 從 Google Fonts 載入兩套字型:一套當標題用、一套當內文用 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- 連結到外部的 CSS 檔案,負責控制外觀 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ 導覽列 ============ -->
+  <header class="nav">
+    <div class="nav-inner">
+      <span class="nav-logo">小明</span>
+      <nav class="nav-links">
+        <a href="#about">關於我</a>
+        <a href="#projects">作品</a>
+        <a href="#contact">聯絡</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ Hero 區塊(網站最上方的主視覺) ============ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">前端新手・正在學習的路上</p>
+      <h1 class="hero-title">
+        我在把想法<br>
+        變成看得見的網頁
+      </h1>
+      <p class="hero-sub">
+        大家好,我是陳小明。這裡記錄我學習寫程式、動手做出來的小作品。
+      </p>
+      <a href="#projects" class="hero-cta">看看我的作品 ↓</a>
+    </div>
+  </section>
+
+  <!-- ============ 關於我 ============ -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <h2 class="section-title">關於我</h2>
+      <p class="section-text">
+        我是一個正在自學的網頁新手,從 HTML 跟 CSS 開始練習。
+        這個網站本身就是我的第一個練習作品——
+        你現在看到的每一行文字、每一個顏色,都是我自己一步步改出來的。
+      </p>
+      <ul class="skills">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>持續學習中</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 作品區塊 ============ -->
+  <section id="projects" class="section section-alt">
+    <div class="section-inner">
+      <h2 class="section-title">作品</h2>
+
+      <!-- 每一張卡片代表一個作品,之後可以直接複製這一整塊來新增作品 -->
+      <div class="project-grid">
+
+        <article class="project-card">
+          <h3>這個作品集網站</h3>
+          <p>用 HTML + CSS 從零開始做的第一個網站,練習排版跟配色。</p>
+        </article>
+
+        <article class="project-card">
+          <h3>待新增作品</h3>
+          <p>把你之後做的第二個小專案放在這裡,附上一兩句話說明它做了什麼。</p>
+        </article>
+
+        <article class="project-card">
+          <h3>待新增作品</h3>
+          <p>持續累積,幾個月後回頭看,會很明顯感覺到自己的進步。</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 聯絡方式 ============ -->
+  <section id="contact" class="section">
+    <div class="section-inner section-inner-narrow">
+      <h2 class="section-title">聯絡我</h2>
+      <p class="section-text">
+        歡迎透過以下方式找到我。
+      </p>
+      <div class="contact-links">
+        <a href="mailto:you@example.com">you@example.com</a>
+        <a href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 陳小明. 用 HTML &amp; CSS 手工打造。</p>
+  </footer>
+
+</body>
+</html>

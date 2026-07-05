@@ -1,0 +1,260 @@
+/* ============================================
+   設計參數 (design tokens)
+   全部集中寫在這裡,之後想換整體配色,
+   只需要改這幾行,不用滿頁去找顏色代碼。
+   ============================================ */
+:root {
+  --color-bg: #FBF8F2;        /* 頁面背景色:溫暖的米白 */
+  --color-ink: #1F2620;       /* 主要文字色:深墨綠,比純黑柔和 */
+  --color-primary: #2F6F62;   /* 主色:沉穩的墨綠,用在深色區塊 */
+  --color-accent: #D98E3B;    /* 強調色:芥末黃橘,用在按鈕、重點文字 */
+  --color-line: #E4DCC8;      /* 分隔線/邊框的淺色 */
+
+  --font-display: 'Fraunces', Georgia, serif;   /* 標題用的襯線字體,較有個性 */
+  --font-body: 'Inter', -apple-system, sans-serif; /* 內文用的無襯線字體,好閱讀 */
+
+  --max-width: 960px; /* 內容區塊的最大寬度,避免螢幕太寬時字排太長 */
+}
+
+/* ============================================
+   基礎重置
+   瀏覽器預設的邊界、字型不一致,先統一清掉
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* 讓 padding 不會撐大元素的實際寬度 */
+}
+
+html {
+  scroll-behavior: smooth; /* 點導覽列連結時,平滑捲動而不是瞬間跳過去 */
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ============================================
+   導覽列
+   ============================================ */
+.nav {
+  position: sticky; /* 往下捲動時,導覽列會黏在畫面最上方 */
+  top: 0;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-line);
+  z-index: 10;
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.8rem;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+}
+
+/* ============================================
+   Hero 區塊(首屏主視覺)
+   ============================================ */
+.hero {
+  padding: 6rem 1.5rem 5rem;
+}
+
+.hero-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.6rem); /* 字體大小會隨螢幕寬度自動縮放 */
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero-sub {
+  max-width: 32rem;
+  font-size: 1.1rem;
+  color: #4A5750;
+  margin-bottom: 2rem;
+}
+
+.hero-cta {
+  display: inline-block;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px; /* 999px 會讓角變成完全的圓弧,做成膠囊形按鈕 */
+  font-weight: 500;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.hero-cta:hover {
+  background: #255950;
+  transform: translateY(-2px); /* 滑鼠移過去時,按鈕輕微往上浮動 */
+}
+
+/* ============================================
+   一般區塊(關於我 / 作品 / 聯絡)共用樣式
+   ============================================ */
+.section {
+  padding: 5rem 1.5rem;
+}
+
+/* section-alt 用來讓「作品」區塊的背景跟其他區塊做出區隔 */
+.section-alt {
+  background: #F1ECE0;
+}
+
+.section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-inner-narrow {
+  max-width: 40rem; /* 聯絡區塊內容較少,寬度縮窄讓排版更緊湊 */
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.section-text {
+  max-width: 38rem;
+  color: #4A5750;
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================
+   關於我：技能標籤
+   ============================================ */
+.skills {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.skills li {
+  background: #fff;
+  border: 1px solid var(--color-line);
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   作品卡片
+   ============================================ */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* 螢幕變窄時自動改成一欄 */
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid var(--color-line);
+  border-radius: 12px;
+  padding: 1.8rem;
+  transition: box-shadow 0.15s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 24px rgba(31, 38, 32, 0.08);
+}
+
+.project-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+  color: var(--color-accent);
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #4A5750;
+}
+
+/* ============================================
+   聯絡方式
+   ============================================ */
+.contact-links {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 500;
+}
+
+.contact-links a {
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 2px;
+}
+
+.contact-links a:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* ============================================
+   頁尾
+   ============================================ */
+.footer {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  color: #7A8078;
+  font-size: 0.85rem;
+  border-top: 1px solid var(--color-line);
+}
+
+/* ============================================
+   手機版微調
+   ============================================ */
+@media (max-width: 600px) {
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
+  .hero {
+    padding: 4rem 1.2rem 3rem;
+  }
+}
