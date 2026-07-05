@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>作品集網站 | 陳小明</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <span class="nav-logo">小明</span>
+      <nav class="nav-links">
+        <a href="index.html">回首頁</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="section-inner">
+      <h2 class="section-title">這個作品集網站</h2>
+      <p class="section-text">
+        這裡可以寫更詳細的介紹:用了什麼技術、做的過程中學到什麼、
+        遇到什麼困難、怎麼解決的。
+      </p>
+      <p class="section-text">
+        也可以放截圖、放連結到 GitHub 上的原始碼。
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 陳小明.</p>
+  </footer>
+
+</body>
+</html>
